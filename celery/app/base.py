@@ -157,11 +157,13 @@ class Celery(object):
     Arguments:
         main (str): Name of the main module if running as `__main__`.
             This is used as the prefix for auto-generated task names.
+        参数
 
     Keyword Arguments:
-        broker (str): URL of the default broker used.
+        broker (str): URL of the default broker used. Broker
         backend (Union[str, type]): The result store backend class,
             or the name of the backend class to use.
+            backend
 
             Default is the value of the :setting:`result_backend` setting.
         autofinalize (bool): If set to False a :exc:`RuntimeError`
@@ -171,10 +173,14 @@ class Celery(object):
         include (List[str]): List of modules every worker should import.
 
         amqp (Union[str, type]): AMQP object or class name.
+        # amqp
         events (Union[str, type]): Events object or class name.
+        # events
         log (Union[str, type]): Log object or class name.
         control (Union[str, type]): Control object or class name.
+        #
         tasks (Union[str, type]): A task registry, or the name of
+        # task
             a registry class.
         fixups (List[str]): List of fix-up plug-ins (e.g., see
             :mod:`celery.fixups.django`).
@@ -187,6 +193,7 @@ class Celery(object):
     Pickler = AppPickler
 
     SYSTEM = platforms.SYSTEM
+    #
     IS_macOS, IS_WINDOWS = platforms.IS_macOS, platforms.IS_WINDOWS
 
     #: Name of the `__main__` module.  Required for standalone scripts.

@@ -148,6 +148,7 @@ class Extensions(object):
 
 class Command(object):
     """Base class for command-line applications.
+    基本类 用于命令行处理
 
     Arguments:
         app (~@Celery): The app to use.
@@ -157,12 +158,14 @@ class Command(object):
 
     Error = Error
     UsageError = UsageError
+    # 和 pyinstaller 一样使用 argparse 处理命令行的输入
     Parser = argparse.ArgumentParser
 
     #: Arg list used in help.
     args = ''
 
     #: Application version.
+    # 版本
     version = VERSION_BANNER
 
     #: If false the parser will raise an exception if positional
